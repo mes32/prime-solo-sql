@@ -26,3 +26,12 @@ SELECT * FROM "accounts" WHERE "city" = 'chicago';
 
 -- 2. How do you get all users with usernames that contain the letter a?
 SELECT * FROM "accounts" WHERE "username" ILIKE '%a%';
+
+-- 3. The bank is giving a new customer bonus! 
+-- How do you update all records with an account balance of 0.00
+-- and a transactions_attempted of 0? Give them a new account balance of 10.00.
+-- Trial Run: SELECT * FROM "accounts" WHERE "account_balance" = 0.00 AND "transactions_attempted" = 0;
+UPDATE "accounts" SET "account_balance" = 10.00 WHERE "account_balance" = 0.00 AND "transactions_attempted" = 0;
+
+-- 4. How do you select all users that have attempted 9 or more transactions?
+SELECT * FROM "accounts" WHERE "transactions_attempted" >= 9;
