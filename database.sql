@@ -21,3 +21,5 @@
 -- 0. How do you get all users?
 SELECT * FROM accounts;
 
+-- 1. How do you get all users from Chicago?
+SELECT * FROM accounts WHERE "city" = 'chicago';
