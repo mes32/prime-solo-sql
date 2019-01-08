@@ -22,4 +22,7 @@
 SELECT * FROM accounts;
 
 -- 1. How do you get all users from Chicago?
-SELECT * FROM accounts WHERE "city" = 'chicago';
+SELECT * FROM "accounts" WHERE "city" = 'chicago';
+
+-- 2. How do you get all users with usernames that contain the letter a?
+SELECT * FROM "accounts" WHERE "username" ILIKE '%a%';
